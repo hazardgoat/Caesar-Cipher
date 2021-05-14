@@ -86,7 +86,7 @@ while True:
         shiftNum = input('Enter a number by which to shift the cipher along the alphabet (1-25): ')
         if len(shiftNum) < 1:
             shiftNum = 13
-            print("Default number selected.")
+            print("Default number selected: 13")
         try:
             shiftNum = int(shiftNum)
         except:
