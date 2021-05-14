@@ -19,7 +19,7 @@ noList = ['n', 'N', 'no', 'No', 'NO']
 def Shifter(dic):
     for index, value in dic.items():
         if processCipher in encodeList:
-            if (index + shiftNum) > 25:
+            if (index + shiftNum) > 26:
                 newIndex = abs(index + shiftNum) - 25
             else:
                 newIndex = index + shiftNum
