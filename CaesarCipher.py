@@ -37,17 +37,18 @@ def Encrypter(userCipher):
     Shifter(dic)
     dic = upperCase
     Shifter(dic)
-    print("Decoding at C =", str(shiftNum) + ":", userCipher)
     userCipher = userCipher.split()
     splitCipher = list(map(list,userCipher))
     for index, word in enumerate(splitCipher):
         for idx, letter in enumerate(word):
             if letter in cipherDict:
                 if processCipher in encodeList:
+                    print("Encoding at C =", str(shiftNum) + ":", userCipher)
                     for key, value in cipherDict.items():
                         if letter == value:
                             word[idx] = cipherDict[value]
                 else:
+                    print("Decoding at C =", str(shiftNum) + ":", userCipher)
                     word[idx] = cipherDict[letter]
             else:
                 continue
