@@ -52,6 +52,7 @@ def Encrypter(userCipher):
                 continue
         splitCipher[index] = "".join(map(str, word))
     splitCipher = " ".join(map(str, splitCipher))
+    userCipher = " ".join(map(str, userCipher))
     if processCipher in encodeList:
         print("Encoding at C =", str(shiftNum) + ":", userCipher)
         print("Cipher encoded as:", splitCipher)
