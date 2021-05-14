@@ -79,14 +79,14 @@ while True:
     userCipher = input("Enter what you would like to encode/decode: ")
     if len(userCipher) < 1:
         userCipher = "This is a Caesar cipher. It's encrpyted!"
-        print("Default entry selected: This is a Caesar cipher. It's encrpyted!")
+        print("Default entry selected")
 
     #asks the user for an amount by which to shift the alphabet for encoding or decoding the user's entry
     while True:
         shiftNum = input('Enter a number by which to shift the cipher along the alphabet (1-25): ')
         if len(shiftNum) < 1:
             shiftNum = 13
-            print("Default number selected: 13")
+            print("Default number selected")
         try:
             shiftNum = int(shiftNum)
         except:
