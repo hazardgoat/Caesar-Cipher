@@ -20,12 +20,12 @@ def Shifter(dic):
     for index, value in dic.items():
         if processCipher in encodeList:
             if (index + shiftNum) > 26:
-                newIndex = abs(index + shiftNum) - 25
+                newIndex = (index + shiftNum) - 26
             else:
                 newIndex = index + shiftNum
         else:
             if (index - shiftNum) < 1:
-                newIndex = 25 - abs(index - shiftNum)
+                newIndex = 26 - abs(index - shiftNum)
             else:
                 newIndex = index - shiftNum
         newValue = dic[newIndex]   
