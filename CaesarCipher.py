@@ -43,20 +43,20 @@ def Encrypter(userCipher):
         for idx, letter in enumerate(word):
             if letter in cipherDict:
                 if processCipher in encodeList:
-                    print("Encoding at C =", str(shiftNum) + ":", userCipher)
                     for key, value in cipherDict.items():
                         if letter == value:
                             word[idx] = cipherDict[value]
                 else:
-                    print("Decoding at C =", str(shiftNum) + ":", userCipher)
                     word[idx] = cipherDict[letter]
             else:
                 continue
         splitCipher[index] = "".join(map(str, word))
     splitCipher = " ".join(map(str, splitCipher))
     if processCipher in encodeList:
+        print("Encoding at C =", str(shiftNum) + ":", userCipher)
         print("Cipher encoded as:", splitCipher)
     else:
+        print("Decoding at C =", str(shiftNum) + ":", userCipher)
         print("Cipher decoded as:", splitCipher)
 
 #main loop
