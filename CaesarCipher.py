@@ -7,7 +7,7 @@ upperCase = {1:'A', 2:'B', 3:'C', 4:'D', 5:'E', 6:'F', 7:'G', 8:'H', 9:'I', 10:'
         12:'L', 13:'M', 14:'N', 15:'O', 16:'P', 17:'Q', 18:'R', 19:'S', 20:'T', 21:'U', 
         22:'V', 23:'W', 24:'X', 25:'Y', 26:'Z'}
 #dictionary that passes the lowerCase and upperCase dictionaries into the translation functions
-dict = {}
+dic = {}
 #dictionary that holds the translated lowerCase and upperCase dictionaries for a given shift value
 cipherDict = {}
 encodeList = ['e', 'E', 'encode', 'Encode', 'ENCODE']
@@ -16,8 +16,8 @@ yesList = ['y', 'Y', 'yes', 'Yes', 'YES']
 noList = ['n', 'N', 'no', 'No', 'NO']
 
 #matches each letter in the alphabet with it's shifted counterpart and stores the updated values in the dictionary cipherDict
-def Shifter(dict):
-    for index, value in dict.items():
+def Shifter(dic):
+    for index, value in dic.items():
         if processCipher in encodeList:
             if (index + shiftNum) > 25:
                 newIndex = abs(index + shiftNum) - 25
@@ -28,15 +28,15 @@ def Shifter(dict):
                 newIndex = 25 - abs(index - shiftNum)
             else:
                 newIndex = index - shiftNum
-        newValue = dict[newIndex]   
+        newValue = dic[newIndex]   
         cipherDict[value] = newValue
 
 #encrypts or decrypts a user entry by a user defined shift amount
 def Encrypter(userCipher):
-    dict = lowerCase
-    Shifter(dict)
-    dict = upperCase
-    Shifter(dict)
+    dic = lowerCase
+    Shifter(dic)
+    dic = upperCase
+    Shifter(dic)
     print("Decoding at C =", str(shiftNum) + ":", userCipher)
     userCipher = userCipher.split()
     splitCipher = list(map(list,userCipher))
