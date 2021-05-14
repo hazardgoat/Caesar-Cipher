@@ -78,7 +78,7 @@ while True:
     #asks the user for an entry to encode or decode
     userCipher = input("Enter what you would like to encode/decode: ")
     if len(userCipher) < 1:
-        userCipher = "Help! Im alive! My heart is beating like a hammer."
+        userCipher = "This is a Caesar cipher. It's encrpyted!"
         print("Default entry selected.")
 
     #asks the user for an amount by which to shift the alphabet for encoding or decoding the user's entry
